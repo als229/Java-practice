@@ -52,60 +52,60 @@ package javapractice;
 
 
 
-////6-3 ÀÌÇØÇÏ¸é¼­ ¿©·¯¹ø ÇØº¸±â
-//public class oolpracitce {
-//
-//	public static void main(String[] args) {
-//		Student s = new Student();
-//		s.name = "±è°ü¹Î";
-//		s.ban = 1;
-//		s.no = 1;
-//		s.kor = 100;
-//		s.eng = 60;
-//		s.math = 76;
-//		System.out.println("ÀÌ¸§ ="+s.name);
-//		System.out.println("ÃÑÁ¡ ="+s.gettotal());
-//		System.out.println("Æò±Õ ="+s.getaverage());
-//	}
-//
-//}
-//
-//class Student {
-//	String name;
-//	int ban;
-//	int no;
-//	int kor;
-//	int eng;
-//	int math;
-//	
-//	Student (){}
-//	
-//	Student(String name, int ban, int no, int kor, int eng, int math) {
-//		this.name = name;
-//		this.ban = ban;
-//		this.no = no;
-//		this.kor = kor;
-//		this.eng = eng;
-//		this.math = math;
-//	}
-//	int gettotal( ) {
-//		return kor+eng+math;
-//	}
-//	float getaverage() {
-//		return (int)(gettotal() / 3f *10 + 0.5f) / 10f;
-//	}
-//	public String info() {
-//		return name
-//				+ "," +ban
-//				+ "," +no
-//				+ "," +kor
-//				+ "," +eng
-//				+ "," +math
-//				+ "," +gettotal()
-//				+ "," +getaverage()
-//				;
-//	}
-//}
+//6-3 ÀÌÇØÇÏ¸é¼­ ¿©·¯¹ø ÇØº¸±â ¿Ö ¾ø¾îÁ³¾î ÀÜµð¾ß
+public class oolpracitce {
+
+	public static void main(String[] args) {
+		Student s = new Student();
+		s.name = "±è°ü¹Î±è°ü¹Î";
+		s.ban = 1;
+		s.no = 1;
+		s.kor = 100;
+		s.eng = 60;
+		s.math = 76;
+		System.out.println("ÀÌ¸§ ="+s.name);
+		System.out.println("ÃÑÁ¡ ="+s.gettotal());
+		System.out.println("Æò±Õ ="+s.getaverage());
+	}
+
+}
+
+class Student {
+	String name;
+	int ban;
+	int no;
+	int kor;
+	int eng;
+	int math;
+	
+	Student (){}
+	
+	Student(String name, int ban, int no, int kor, int eng, int math) {
+		this.name = name;
+		this.ban = ban;
+		this.no = no;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+	}
+	int gettotal( ) {
+		return kor+eng+math;
+	}
+	float getaverage() {
+		return (int)(gettotal() / 3f *10 + 0.5f) / 10f;
+	}
+	public String info() {
+		return name
+				+ "," +ban
+				+ "," +no
+				+ "," +kor
+				+ "," +eng
+				+ "," +math
+				+ "," +gettotal()
+				+ "," +getaverage()
+				;
+	}
+}
 
 //6-4 µÎÁ¡ °Å¸® ±¸ÇÏ´Â °ø½ÄÀº (x-x1)Á¦°ö+(y-y1)Á¦°ö ÀüÃ¼¿¡ ·çÆ®ÀÌ´ÙÉýþ°
 //						Math.sqrt ¿ä³à¼®ÀÌ ·çÆ® ÇØÁÖ´Â ¸Þ¼­µå
@@ -119,8 +119,8 @@ package javapractice;
 //		System.out.println(getdistance(1,1,2,2));
 //	}
 //}
-//
-//		
+
+		
 
 
 //6-6 ¸ÞÀÎ¸Þ¼­µå À§Ä¡¸¦ ÀüÃ¼¸¦ Æ÷ÇÔÇÏ°Ô Çß´õ´Ï ½ÇÇàÀÌ ¾ÈµÆ´Ù. Å¬·¡½º ¸¶ÀÌÆ÷ÀÎÆ®¸¦ ¿ÜºÎ·Î º¸³»¾ß ½ÇÇàÀÌ µÈ´Ù.
