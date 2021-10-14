@@ -126,30 +126,142 @@ package javapractice;
 //6-6 메인메서드 위치를 전체를 포함하게 했더니 실행이 안됐다. 클래스 마이포인트를 외부로 보내야 실행이 된다.
 //찾아보니 static method 안에서 static으로 선언되지 않은 class를 생성, 사용할 때 나타나는 오류라 한다.
 //아직 정확한 개념을 이해하지 못한 것 같다. 6장 7장 복습해라잉
-class Mypoint {	
-	int x;
-	int y;
+//class Mypoint {	
+//	int x;
+//	int y;
+//
+//	Mypoint(int x, int y) {
+//		this.x=x;
+//		this.y=y;
+//	}
+//
+//	double getdistance (int x1, int y1) {
+//		return Math.sqrt((x-x1)*(x-x1)+(y-y1)*(y-y1));
+//	}
+//
+//}
+//public class oolpracitce {
+//
+//	public static void main(String[] args) {
+//		Mypoint p = new Mypoint(1,1);
+//
+//		System.out.println(p.getdistance(2,2));
+//	}
+//}
 
-	Mypoint(int x, int y) {
-		this.x=x;
-		this.y=y;
+
+//// 6-17
+//public class oolpracitce {
+//
+//	public static int[] shuffle (int []arr) {
+//		if(arr ==null || arr.length==0)
+//			return arr;
+//		
+//		for(int i = 0; i < arr.length; i++) {
+//			int n = (int)(Math.random()*arr.length);
+//			
+//			int tmp = arr[i];
+//			arr[i] = arr[n];
+//			arr[n] = tmp;
+//			
+//		}
+//			
+//		
+//		
+//		return arr;
+//	}
+//	
+//	
+//	public static void main(String[] args) {
+//		int[] original = {1,2,3,4,5,6,7,8,9};
+//		System.out.println(java.util.Arrays.toString(original));
+//		
+//		int[] result = shuffle(original);
+//		System.out.println(java.util.Arrays.toString(result));
+//		
+//	}
+//}
+
+
+//6-18
+//public class oolpracitce{
+//	public static boolean isNumber(String str) {
+//		if(str==null || str.equals(""))
+//			return false;
+//		
+//		for(int i = 0; i < str.length(); i++) {
+//			char ch = str.charAt(i);
+//			
+//			if(ch<'0'||ch>'9') {
+//				return false;
+//			}
+//		}
+//		return true;
+//	}
+//	
+//	
+//	
+//	
+//	
+//	public static void main(String args[]) {
+//		String str = "123";
+//		System.out.println(str+"는 숫자입니까?"+isNumber(str));
+//		
+//		str = "1234o";
+//		System.out.println(str+"는 숫자입니까?"+isNumber(str));
+//	}
+//	
+//}
+
+class MyTv{
+	boolean isPowerOn;
+	int channel;
+	int volume;
+	
+	final int MAX_VOLUME = 100;
+	final int MIN_VOLUME = 0;	
+	final int MAX_CHANNEL = 100;	
+	final int MIN_CHANNEL = 1;	
+	
+	void turnOnOff() {
+		isPowerOn = !isPowerOn;
 	}
-
-	double getdistance (int x1, int y1) {
-		return Math.sqrt((x-x1)*(x-x1)+(y-y1)*(y-y1));
+	
+	void vouluUp() {
+		if(volume<MAX_VOLUME)
+			volume++;
 	}
-
+	
+	void vouluDown() {
+		if(volume<MIN_VOLUME)
+			volume--;
+	}
+	
+	void channelUp() {
+		if(channel==MAX_CHANNEL) {
+			channel = MIN_CHANNEL;
+		}else {
+			channel++;
+		}
+	}
+	
+	void channelDown() {
+		if(channel==MIN_CHANNEL) {
+			channel = MAX_CHANNEL;
+		}else {
+			channel--;
+		}
+	}
+	
+	
+	
+	
+	
+	public class oolpractice(String args[]) {
+		
+	}
+	
 }
-public class oolpracitce {
-
-	public static void main(String[] args) {
-		Mypoint p = new Mypoint(1,1);
-
-		System.out.println(p.getdistance(2,2));
-	}
-}
-
-
 
 
 
